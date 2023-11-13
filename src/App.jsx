@@ -1,16 +1,16 @@
+import { Categories } from "./components/Categories";
+import { Pages } from "./pages/Pages";
 import { BrowserRouter } from "react-router-dom";
-import Category from "./components/Categories";
-import Pages from "./pages/Pages";
 
-function App() {
+const App = () => {
   return (
-    <>
+    <div>
       <BrowserRouter>
-        <Category />
+        <Categories />
         <Pages />
       </BrowserRouter>
-    </>
+    </div>
   );
-}
+};
 
 export default App;

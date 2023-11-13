@@ -1,15 +1,12 @@
+import { Popular } from "../components/Popular"
+import { Veggie } from "../components/Veggie"
 
-import Popular from "../components/Popular";
-import Veggie from "../components/Veggie";
 
-function Home() {
+export const Home = () => {
   return (
     <div>
-
-      <Veggie />
-      <Popular />
+      <Veggie/>
+      <Popular/>
     </div>
-  );
+  )
 }
-
-export default Home;

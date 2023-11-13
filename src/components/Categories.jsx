@@ -1,39 +1,34 @@
 import { FaPizzaSlice, FaHamburger } from "react-icons/fa";
 import { GiNoodles, GiChopsticks } from "react-icons/gi";
-import { Link } from "react-router-dom";
 import styled from "styled-components";
-// import { NavLink } from "react-router-dom/cjs/react-router-dom.min";
+import { NavLink } from "react-router-dom";
 
-const Category = () => {
+export const Categories = () => {
   return (
-    <List className="list">
-      <Link to="/cuisine/italian">
+    <List>
+      <NavLink to={"/cuisine/Italian"}>
         <FaPizzaSlice />
         <h4>Italian</h4>
-      </Link>
-      <Link to="/cuisine/american">
+      </NavLink>
+      <NavLink to={"/cuisine/American"}>
         <FaHamburger />
         <h4>American</h4>
-      </Link>
-      <Link to="/cuisines/thai">
+      </NavLink>
+      <NavLink to={"/cuisine/Japanese"}>
         <GiNoodles />
-        <h4>Thai</h4>
-      </Link>
-      <Link to="/cuisine/japanese">
-        <GiChopsticks />
         <h4>Japanese</h4>
-      </Link>
+      </NavLink>
+      <NavLink to={"/cuisine/Thai"}>
+        <GiChopsticks />
+        <h4>Thai</h4>
+      </NavLink>
     </List>
   );
 };
 
 const List = styled.div`
+margin-top: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 2rem 0;
 `;
-
-
-
-export default Category;
